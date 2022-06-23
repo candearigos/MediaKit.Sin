@@ -412,6 +412,7 @@ margin-left: 0%;
 
 .contactosadicionales{
     background-color: rgb(57, 72, 85);
+    padding-left: 5%;
 }
 .contactosadicionales h2{
     color: var(--main-color);
@@ -419,26 +420,23 @@ margin-left: 0%;
     font-size: 40px;
     padding: 2%;
 }
-.ricardoimg, .pabloimg{
-    width: 50%;
-    border: 2px solid var(--secondary-color);
-    margin-left: 8%;
-    margin-bottom: 3%;
-    filter: grayscale(100%);
-}
 .contactosadicionales h3{
+    font-family: 'Crimson Pro', serif;
+    font-size: 15px;
+}
+.nombre{
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    margin-right: 2%;
+}
+.medio{
     font-size: 25px;
     color: var(--main-color);
     font-family: 'Open Sans', sans-serif;
-    position: absolute;
-    margin-left: -10%;
     margin-bottom: 2%;
+    padding-right: 3%;
 }
-.contactosadicionales p{
-    position: absolute;
-    margin-left: -10%;
-    padding: 2%;
-}
+
 
 /* branded */
 .titulobranded h1{
