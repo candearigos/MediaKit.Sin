@@ -1,8 +1,44 @@
 :root {
-    --main-color: rgb(230, 186, 27);
-    --text-color: #171717;
+    --yellow-color:rgb(230, 186, 27);
+    --main-color: rgb(255, 255, 255);
+    --text-color: #3B7D9F;
     --bg-color: #394855;
     --secondary-color:rgb(173, 130, 73);
+    --lightgray-color: rgb(224, 224, 224);
+}
+.indexperfil{
+    font-family: 'Crimson Pro', serif;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    background-color: var(--bg-color);
+}
+.indexperfil a{
+    text-decoration: none;
+    color: white;
+}
+.indexperfil a:hover{
+    color: var(--secondary-color);
+}
+/* sliders */
+.tituloaudiencia h1, .txtnuestrasmarcas h1{
+    background-color:var(--text-color);
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 35px;
+    padding: 2%;
+}
+.sectiondos h2{
+    font-family: 'Open Sans', sans-serif;
+    color: var(--secondary-color);
+}
+.tituloaudiencia h2, .iconos h2, .sectiontres h2{
+    color: var(--bg-color);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    padding-left: 5%;
+}
+.iconos h2{
+    color: var(--secondary-color);
 }
 html{
     overflow-x: hidden;
@@ -14,7 +50,6 @@ html{
     color: --text-color;
 
 }
-
 /* VIDEO PRINCIPAL HEADER */
 
 .titulo {
@@ -46,7 +81,7 @@ video {
 }
 .titulo h1{
     font-size: 2.5rem;
-    color: var(--main-color);
+    color: var(--secondary-color);
     font-family: 'Open Sans', sans-serif;
     font-weight: 800;
     animation-name: tituloppal;
@@ -84,7 +119,7 @@ video {
     width: 100%;
     height: 100%;
     text-decoration: none;
-    background-color: var(--main-color);
+    background-color: var(--yellow-color);
     color: var(--text-color);
     padding: 2em 1em 1em 1em ;
 
@@ -110,7 +145,7 @@ video {
     height: 100%;
     text-decoration: none;
     border-radius: 2%;
-    background-color: var(--main-color);
+    background-color: var(--bg-color);
     color: var(--text-color);
     padding: 0.5em 1em;
 }
@@ -143,9 +178,6 @@ video {
 .imgsmarcasresponsive{
     display: none;
 }
-.sectiondos{
-    font-family: 'Open Sans', sans-serif;
-}
 .subtitulo {
     background-color: var(--bg-color);
 }
@@ -157,19 +189,9 @@ video {
     font-size: 15px;
     font-weight: 400;
 }
-
-.sectiondos {
-    font-family: 'Crimson Pro',serif;
-}
-.sectiondos h2{
-    font-size: 40px;
-    font-family: 'Open Sans', sans-serif;
-    color: var(--secondary-color);
-}
-
 .strong{
     font-size: 30px;
-    color: var(--secondary-color);
+    color: var(--bg-color);
     font-family: 'Open Sans', sans-serif;
 }
 .cifras h3{
@@ -201,12 +223,79 @@ video {
     margin-left: 35%
    
 }
-/* audiencia */
-.mockupradio img{
-    width: 37.5%;
+/* acordion */
+
+.contenedoracordion{
+    width: 1200px;
+    height: 380px;
+    display: flex;
     justify-content: center;
-    margin-left: 31.25%;
 }
+.single{
+    padding: 0 4rem;
+    display: grid;
+    place-content: center;
+    width: 200px;
+    background-size: cover;
+    background-position: center;
+    backface-visibility: hidden;
+    overflow: hidden;
+    position: relative;
+    transition: 500ms ease-in-out width;
+                
+}
+.single::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+  
+    transition: 500ms ease-in-out background-color;
+
+}
+.single:nth-child(1){
+    background-image: url(../imgs/mediorevista-09.dos);
+}
+.single:nth-child(2){
+    background-image: url(../imgs/mediodigital.dos.png);
+}
+.single:nth-child(3){
+    background-image: url(../imgs/medioradio.dos.png);
+}
+.single:nth-child(4){
+    background-image: url(../imgs/mediotv.dos.png)
+}
+.single h2{
+    color: var(--main-color);
+    background-color: var(--bg-color);
+    padding: 2%;
+    font-size: 20px;
+}
+.single p{
+    background-color: rgba(0, 0, 0, 0.7);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 25px;
+    color: white;
+    padding: 0;
+    border: none;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.7) ;
+    transition: 500ms ease-in-out height,
+                500ms ease-in-out padding;
+
+    /* hidden */
+    height: 0;
+    overflow: hidden;
+}
+.single:hover{
+    width: 30%;
+}
+.single:hover::before{
+    
+}
+.single:hover p{
+    height: 80%;
+    padding: 2%;
+}
+/* audiencia */
 .carousel-item .carousel-caption {
    position: static;
    font-family: 'Open Sans', sans-serif;
@@ -217,82 +306,74 @@ video {
     font-weight: 800;
     font-size: 40px;
 }
-.mockupdispositivos img{
-    width: 80%;
-    margin-bottom: 10%;
+.carousel h3{
+    color: var(--secondary-color);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 25px;
 }
-.mockuptv img{
+.mockup img{
     width: 80%;
-    margin-bottom: 5%;
-    margin-left: 10%;
-    margin-top: 5%;
 }
-.papel{
-    width: 60%;
-    margin-left: 20%
+.isotipo{
+    width: 30%;
 }
 /* section 3 */
-.sectiontres{
-    background-color:rgb(57, 72, 85);
-    padding: 5%;
-    margin-top: -1.2%;
+.pline a, .pbrand a{
+    color: var(--secondary-color);
 }
-.sectiontres h1{
+.sectiontres h4{
+    background-color: none;
+    color: var(--secondary-color);
     font-family: 'Open Sans', sans-serif;
-    margin-top: -3%;
-    margin-bottom: 5%;
-    font-size: 40px;
+    padding: 2%;
+    /* font-size: 2rem; */
 }
-.sectiontres h2{
-    color: var(--main-color);;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 45px;
+.sectiontres a:hover{
+    background-color: rgb(222, 222, 222);
     text-decoration: none;
+    color: white;
+    font-size: 20px;
 }
-.pline:hover, .pbrand:hover{
-    background-color: rgb(155, 155, 155);
-    text-decoration: none;
+.lineamedios{
+    padding: 0.1%;
+    background-color: rgb(238, 234, 234) ;
 }
-.pbrand a, .pline a{
-    text-decoration: none;
-    font-size: 2rem;
-}
-
 /* section 4 */
 .titulocuatro h2{
     color: var(--secondary-color);
     font-family: 'Open Sans', sans-serif;
     font-size: 40px;
 }
+.iconos, .tituloaudiencia, .carousel, .sectiontres{
+    background-color: var(--lightgray-color);
+}
+.iconos{
+    background-color: var(--bg-color);
+}
 .iconos i{
     font-size: 50px;
-    color:rgb(57, 72, 85);
+    color:rgb(255, 255, 255);
     transition: 0.5s;
+}
+.iconos a{
+    text-decoration: none;
 }
 .elemidia{
     transform: rotate(180deg);
 }
 .iconos h3{
-    color: var(--secondary-color);
+    color: white;
     font-family: 'Crimson Pro', serif;
+    font-size: 18px;
+    
+}
+.iconos h3:hover{
+    color: var(--secondary-color);
 }
 .iconos i:hover{
     color: var(--secondary-color);
 }
 /* audiencia */
-.tituloaudiencia h1{
-    background-color:rgb(57, 72, 85);
-    color: white;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 40px;
-    padding: 2%;
-}
-.tituloaudiencia h2{
-    color: var(--bg-color);
-    font-family: 'Open Sans', sans-serif;
-    font-size: 45px;
-    padding-left: 5%;
-}
 .audienciauno img{
 width: 150%;
 margin-left: 0%;
@@ -335,6 +416,9 @@ margin-left: 0%;
 .audienciafemenina{
     background-color: rgb(233, 233, 233);
 }
+.mediosa{
+    text-decoration: none;
+}
 /* nuestras marcas */
 .txtnuestrasmarcas{
     background-color:rgb(57, 72, 85);
@@ -349,7 +433,6 @@ margin-left: 0%;
 .nuestrasmarcas{
     font-family: 'Open Sans', sans-serif;
     font-size: 40px;
-    margin-top: 2%;
     margin-bottom: 5%;
     padding-top: 2%;
     padding-bottom: 2%;  
@@ -413,78 +496,36 @@ margin-left: 0%;
     margin-bottom: 0;
 }
 /* contacto */
-
+.contactosadicionalestitulo{
+    background-color: var(--bg-color);
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 40px;
+    padding-left: 5%;
+}
 .contactosadicionales{
-    background-color: rgb(57, 72, 85);
+    padding-top: 5%;
+}
+.contactosadicionales{
+    background-color: var(--lightgray-color);
     padding-left: 5%;
 }
 .contactosadicionales h2{
-    color: var(--main-color);
+    color: var(--bg-color);
     font-family: 'Open Sans', sans-serif;
-    font-size: 40px;
+    font-size: 20px;
     padding: 2%;
 }
-.contactosadicionales h3{
+.contactosadicionales p{
     font-family: 'Crimson Pro', serif;
     font-size: 15px;
 }
-.nombre{
-    font-size: 20px;
-    font-family: 'Open Sans', sans-serif;
-    margin-right: 2%;
-}
-.medio{
-    font-size: 25px;
-    color: var(--main-color);
+.contactosadicionales h3{
+    font-size: 15px;
+    color: var(--secondary-color);
     font-family: 'Open Sans', sans-serif;
     margin-bottom: 2%;
     padding-right: 3%;
-}
-
-
-/* branded */
-.titulobranded h1{
-    position: absolute;
-    top: 70%;
-    justify-content: center;
-    padding: 3%;
-    font-family: 'Open Sans', sans-serif;
-    color: var(--secondary-color);
-    background-color:rgb(57, 72, 85);
-    width: 100%;
-}
-.branded{
-    background-color: rgb(163, 163, 163);
-    color:white;
-    text-align: center;
-    font-family: 'Open Sans', sans-serif;
-    width: 50%;
-    padding: 3%;
-    margin-top: -2%;
-    position: relative;
-}
-.branded h4{
-    width: 70%;
-    margin-left: 15%;
-}
-.branded h3{
-    font-family: 'Open Sans', sans-serif;
-    color:rgb(57, 72, 85);
-    margin-top: 1%;
-    font-size: 30px;
-    padding-top: 2%;
-}
-.brandedadhoc h2{
-    color: var(--secondary-color);
-    font-family: 'Open Sans', sans-serif;
-    font-size: 40px;
-    margin-top: 5%;
-}
-.brandedadhoc p{
-    font-size: 20px;
-    width: 80%;
-    margin-left: 10%;
-    font-family: 'Open Sans', sans-serif;
 }
 /* radio */
 .radio img{
@@ -685,11 +726,52 @@ margin-left: 0%;
     font-size: 30px;
 }
 /* branded */
+.sectionbranded{
+    background-color: var(--bg-color);
+}
+.branded h1{
+    color: var(--secondary-color);
+    font-family: 'Open Sans', sans-serif;
+    padding: 2%;
+}
+.branded h4{
+    width: 80%;
+    font-family: 'Open Sans', sans-serif;
+
+}
+.mockupig{
+    width: 100%;
+}
+.redes h4{
+    margin-top: 25%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    border: solid 2px var(--secondary-color);
+    padding: 2%;
+}
 .brandedresponsive{
     display: none;
 }
 .brandedpc{
     display: block;
+}
+.eventos img{
+    width: 170%;
+    margin-left: -30%;
+}
+.redes i{
+    font-size: 30px;
+    color: var(--secondary-color);
+}
+
+.redes h3{
+    color: white;
+    font-size: 20px;
+}
+.redes h2{
+    margin-bottom: -20%;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
 }
 @media (min-width: 576px) {
     .titulo h1 {
@@ -754,5 +836,24 @@ margin-left: 0%;
     .caracteristicas h4{
         font-size: 25px;
     }
-    
+    /* branded */
+.branded h1{
+    padding: 2%;
+}
+.branded h4{
+    width: 80%;
+
+}
+.redes h4{
+    margin-left: 5%;
+}
+.redes h3{
+    margin-bottom: 15%;
+}
+.redes h2{
+    margin-left: 5%;
+}
+.redes h4{
+    width: 90%;
+}
 }
