@@ -1,9 +1,9 @@
 :root {
     --yellow-color:rgb(230, 186, 27);
     --main-color: rgb(255, 255, 255);
-    --text-color: #3B7D9F;
+    --text-color: #21BCC6;
     --bg-color: #394855;
-    --secondary-color:rgb(173, 130, 73);
+    --secondary-color: #3B7D9F;
     --lightgray-color: rgb(224, 224, 224);
 }
 .indexperfil{
@@ -20,12 +20,15 @@
     color: var(--secondary-color);
 }
 /* sliders */
-.tituloaudiencia h1, .txtnuestrasmarcas h1{
+.tituloaudiencia h1, .txtnuestrasmarcas h1, .contactosadicionalestitulo h1, .subtitulo h4{
     background-color:var(--text-color);
     color: white;
     font-family: 'Open Sans', sans-serif;
     font-size: 35px;
     padding: 2%;
+}
+.titulo h1{
+    color: var(--text-color);
 }
 .sectiondos h2{
     font-family: 'Open Sans', sans-serif;
@@ -38,7 +41,7 @@
     padding-left: 5%;
 }
 .iconos h2{
-    color: var(--secondary-color);
+    color: var(--bg-color);
 }
 html{
     overflow-x: hidden;
@@ -79,9 +82,12 @@ video {
 .empresa a{
     text-decoration: none;
 }
+.empresa h3:hover{
+    transform: scale(1.1);
+}
 .titulo h1{
     font-size: 2.5rem;
-    color: var(--secondary-color);
+    color: #21BCC6;
     font-family: 'Open Sans', sans-serif;
     font-weight: 800;
     animation-name: tituloppal;
@@ -145,12 +151,12 @@ video {
     height: 100%;
     text-decoration: none;
     border-radius: 2%;
-    background-color: var(--bg-color);
+    background-color: #3B7D9F;;
     color: var(--text-color);
     padding: 0.5em 1em;
 }
 .titulo p a.botoncontacto:hover{
-    background-color: white;
+    background-color: rgb(211, 210, 210);
 }
 .slide {
     background-color: white;
@@ -179,7 +185,7 @@ video {
     display: none;
 }
 .subtitulo {
-    background-color: var(--bg-color);
+    background-color: var(--text-color);
 }
 .subtitulo h4 {
     font-family: 'Open Sans', sans-serif;
@@ -209,6 +215,7 @@ video {
 }
 .columnauno h4{
     font-family: 'Crimson Pro', serif;
+    font-size: 25px;
 }
 .columnauno, .columnados{
     padding-top: 5%;
@@ -220,8 +227,14 @@ video {
 .columnados h3{
     line-height: 180%;
     text-align: justify;
-    margin-left: 35%
+    margin-left: 35%;
+    font-family: 'Crimson Pro', serif;
+    font-size: 25px;
    
+}
+.fuente{
+    margin-top: 20%;
+    font-size: 13px;
 }
 /* acordion */
 
@@ -306,10 +319,13 @@ video {
     font-weight: 800;
     font-size: 40px;
 }
+.carousel-caption h2:hover{
+    color: var(--text-color);
+}
 .carousel h3{
     color: var(--secondary-color);
     font-family: 'Open Sans', sans-serif;
-    font-size: 25px;
+    font-size: 20px;
 }
 .mockup img{
     width: 80%;
@@ -317,9 +333,13 @@ video {
 .isotipo{
     width: 30%;
 }
+.isotipo:hover{
+    transform: scale(1.1);
+}
 /* section 3 */
 .pline a, .pbrand a{
     color: var(--secondary-color);
+    font-size: 20px;
 }
 .sectiontres h4{
     background-color: none;
@@ -348,12 +368,15 @@ video {
     background-color: var(--lightgray-color);
 }
 .iconos{
-    background-color: var(--bg-color);
+    background-color: var(--lightgray-color);
 }
 .iconos i{
     font-size: 50px;
-    color:rgb(255, 255, 255);
+    color:var(--secondary-color);
     transition: 0.5s;
+}
+.iconos i:hover{
+    transform: scale(1.1);
 }
 .iconos a{
     text-decoration: none;
@@ -362,16 +385,13 @@ video {
     transform: rotate(180deg);
 }
 .iconos h3{
-    color: white;
+    color: var(--secondary-color);
     font-family: 'Crimson Pro', serif;
     font-size: 18px;
     
 }
 .iconos h3:hover{
-    color: var(--secondary-color);
-}
-.iconos i:hover{
-    color: var(--secondary-color);
+    transform: scale(1.1);
 }
 /* audiencia */
 .audienciauno img{
@@ -488,7 +508,7 @@ margin-left: 0%;
     font-family: 'Crimson Pro', serif;
 }
 .carastxt h3{
-    font-size: 40px;
+    font-size: 30px;
     font-family: 'Open Sans', sans-serif;
     color: var(--bg-color);
 }
@@ -496,13 +516,7 @@ margin-left: 0%;
     margin-bottom: 0;
 }
 /* contacto */
-.contactosadicionalestitulo{
-    background-color: var(--bg-color);
-    color: white;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 40px;
-    padding-left: 5%;
-}
+
 .contactosadicionales{
     padding-top: 5%;
 }
@@ -602,17 +616,23 @@ margin-left: 0%;
     margin-top: 10%;
 }
 /* casesofsucces */
-.sectionunocases h1{
+.sectionunocases h1, .casos{
     font-family: 'Open Sans', sans-serif;
     font-size: 30px;
     color: rgb(97, 124, 182);
     margin-top: 15%;
 }
-.sectionunocases h3{
-    font-family: 'Open Sns', sans-serif;
+.casos{
+    color: var(--text-color);
 }
-.bloques h3{
+.sectionunocases h3{
     font-family: 'Open Sans', sans-serif;
+    font-size: 25px;
+    color: var(--secondary-color);
+}
+.bloques h4{
+    font-family: 'Open Sans', sans-serif;
+    color: var(--text-color);
 }
 .caracteristicas{
     background-color: rgb(57, 72, 85) ;
@@ -622,10 +642,14 @@ margin-left: 0%;
     border-radius: 5%;
 }
 .caracteristicas h4{
-    font-size: 30px;
+    font-size: 25px;
 }
 .textobranded{
-    font-family: 'Crimson Pro', serif;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 25px;
+    width: 60%;
+    margin-left: 17%;
+    color: var(--bg-color);
 }
 .mostrarArriba{
     animation: mostrarArriba 1s
@@ -695,7 +719,7 @@ margin-left: 0%;
 }
 .vermas{
     text-decoration: none;
-    background-color: rgb(204, 161, 112) ;
+    background-color: var(--secondary-color);
     color: white;
     border-radius: 5%;
     padding: 2%;
@@ -729,10 +753,10 @@ margin-left: 0%;
 .sectionbranded{
     background-color: var(--bg-color);
 }
-.branded h1{
-    color: var(--secondary-color);
+.branded h1,  .sectionunocases h1{
+    color: var(--text-color);
     font-family: 'Open Sans', sans-serif;
-    padding: 2%;
+    padding: 0%;
 }
 .branded h4{
     width: 80%;
@@ -746,8 +770,11 @@ margin-left: 0%;
     margin-top: 25%;
     font-family: 'Open Sans', sans-serif;
     font-size: 20px;
-    border: solid 2px var(--secondary-color);
+    border: solid 2px var(--text-color);
     padding: 2%;
+}
+.emailmk{
+    padding-bottom: 5%;
 }
 .brandedresponsive{
     display: none;
@@ -761,7 +788,7 @@ margin-left: 0%;
 }
 .redes i{
     font-size: 30px;
-    color: var(--secondary-color);
+    color: var(--text-color);
 }
 
 .redes h3{
@@ -772,6 +799,24 @@ margin-left: 0%;
     margin-bottom: -20%;
     color: white;
     font-family: 'Open Sans', sans-serif;
+}
+.textofooter{
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
+}
+.videoresponsive{
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    object-fit: cover;
+    opacity: 100%;
+}
+.desktop{
+    display: block;
 }
 @media (min-width: 576px) {
     .titulo h1 {
@@ -808,6 +853,8 @@ margin-left: 0%;
 @media(max-width: 480px){
     .imgsmarcasresponsive{
         display: block;
+        margin-top: -15%;
+        margin-bottom: -10%;
     }
     .imgsmarcas{
         display: none;
@@ -855,5 +902,14 @@ margin-left: 0%;
 }
 .redes h4{
     width: 90%;
+}
+.isotipo{
+    width: 15%;
+}
+.videoresponsive{
+    display: block;
+}
+.desktop{
+    display: none;
 }
 }
