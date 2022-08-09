@@ -523,6 +523,7 @@ margin-left: 0%;
 .contactosadicionales{
     background-color: var(--lightgray-color);
     padding-left: 5%;
+    margin-top: -2%;
 }
 .contactosadicionales h2{
     color: var(--bg-color);
@@ -804,6 +805,10 @@ margin-left: 0%;
     font-size: 12px;
     font-family: 'Open Sans', sans-serif;
 }
+.contacts{
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
 .videoresponsive{
     display: none;
     width: 100%;
@@ -871,6 +876,12 @@ margin-left: 0%;
     .radiof img{
         margin-top: 10%;
     }
+    .columnados h3{
+        margin-left: 28%;
+    }
+    .datos h2{
+        font-size: 35px;
+    }
     .brandedresponsive{
         display: block;
     }
@@ -905,6 +916,9 @@ margin-left: 0%;
 }
 .isotipo{
     width: 15%;
+}
+.contacts{
+    padding-top:  0%;
 }
 .videoresponsive{
     display: block;
