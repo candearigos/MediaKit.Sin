@@ -529,7 +529,6 @@ margin-left: 0%;
     color: var(--bg-color);
     font-family: 'Open Sans', sans-serif;
     font-size: 20px;
-    padding: 2%;
 }
 .contactosadicionales p{
     font-family: 'Crimson Pro', serif;
@@ -833,6 +832,9 @@ margin-left: 0%;
     .carousel-caption h2{
         font-size: 36px;
     }
+    .subtitulo h4 {
+        font-size: 28px;
+    }
 }
 
 @media (min-width: 992px) {
@@ -845,6 +847,9 @@ margin-left: 0%;
     .titulo h1 {
         font-size: 3.4rem;
         margin-top: 10%;
+    }
+    .subtitulo h4 {
+        font-size: 28px;
     }
 }
 @media (min-width: 1200px) {
