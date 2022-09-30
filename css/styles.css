@@ -158,6 +158,21 @@ video {
 .titulo p a.botoncontacto:hover{
     background-color: rgb(211, 210, 210);
 }
+.programacion a{
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    border-radius: 2%;
+    background-color: var(--bg-color);
+    color: white;
+    padding: 0.5em 1em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+}
+.programacion a:hover{
+    color: var(--bg-color);
+    background-color: rgb(203, 200, 200);
+}
 .slide {
     background-color: white;
 }
@@ -930,5 +945,10 @@ margin-left: 0%;
 }
 .desktop{
     display: none;
+}
+.programacion a{
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 5%;
 }
 }
